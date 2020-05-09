@@ -29,8 +29,19 @@ int main()
         //out << printfile() << endl;
     }*/
 
-    int i = (!strcmp("if", "if"));
-    cout<<i;
+    //int i = (!strcmp("if", "if"));
+
+    char buffer[20];
+    for(int i=0;i<10;i++){
+        buffer[i]='a';
+    }
+    buffer[10]='\0';
+    cout<<strlen(buffer);
+
+    cout<<buffer;
+
+//    char ch= EOF;
+ //   cout<<int(ch);
 
     out.close();
     return 0;

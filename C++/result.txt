@@ -1,2 +1,47 @@
-<INT, -134891324>
-<ID, _daiu289jk2mbnfs_319j>
+<INT, -1348091324>
+<ID, _daiu028900jk2mb0nfs_319j>
+<STRING, "da7fkf345jah">
+<STRING, "adf fdas4far5s  f3212s">
+<COMPARISON, <>
+<KEYWORD, if>
+<INT, 2>
+<TYPE, int>
+<ID, main>
+<LPAREN>
+<RPAREN>
+<LBRACKET>
+<ID, printf>
+<LPAREN>
+<STRING, "helloworld">
+<RPAREN>
+<SEMICOLON>
+<TYPE, int>
+<ID, a>
+<ASSIGNMENT>
+<INT, 1>
+<SEMICOLON>
+<TYPE, float>
+<ID, b>
+<ASSIGNMENT>
+<FLOAT, 0.0>
+<RBRACKET>
+<ARITHMETIC, ->
+<STRING, "dfd">
+<INT, -2>
+<KEYWORD, if>
+<INT, 89999>
+<ARITHMETIC, ->
+<INT, 0>
+<ID, afdjkfhadsf>
+<INT, -213>
+<ARITHMETIC, ->
+<INT, 0>
+<INT, 123>
+<FLOAT, -0.0>
+<ASSIGNMENT>
+<LPAREN>
+<RPAREN>
+<INT, 12>
+<ID, if123abc>
+<FLOAT, -0.0>
+<INT, 0>
