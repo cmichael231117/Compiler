@@ -1,0 +1,17 @@
+Follow Set
+S'	: $
+A	: $
+B	: $, a, e, f, h, i, j, t
+C	: $, a
+D	: r
+E	: r
+F	: j, t
+G	: a, e, f, h, i, j, t
+H	: o, r
+I	: o, r
+J	: o, r
+K	: k, o, r
+L	: l, k, o, r, n
+M	: r, o
+N	: t
+Q	: a, e, f, h, i, j, t

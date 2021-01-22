@@ -1,0 +1,39 @@
+int arith(int a){
+    int b = 1 - 2 + 3 - 4*9/10;
+    while((a + 10) > (b + 8)){
+        while(a == b){
+            a = a * b;
+        }
+    }
+    return b;
+}
+
+char hello(char msg){
+    msg = "hello";
+    int i;
+    float result = 0.0;
+    for(i=0; i<5; i = i + 1){
+        result = (1 * 2 - 3) / 4;
+    }
+    return msg;
+}
+
+int main(){
+    int num1;
+    int num2 = 1;
+
+    if(num2 == 1){
+        int i;
+        int sum = 0;
+        for(i = 0; i < 11; i = i + i){
+            sum = sum + i;
+            if(sum == 10){
+                num1 = sum / 10;
+            }
+        }
+    }
+    else{
+      num1 = 1;
+    }
+   return 0;
+}

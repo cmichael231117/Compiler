@@ -1,0 +1,63 @@
+<CFG>
+
+01:    CODE -> VDECL CODE | FDECL CODE | ϵ 
+02:    VDECL -> vtype id semi | vtype ASSIGN semi  
+03:    ASSIGN -> id assign RHS  
+04:    FDECL -> vtype id lparen ARG rparen lbrace BLOCK RETURN rbrace 
+05:    ARG -> vtype id MOREARGS | ϵ 
+06:    MOREARGS -> comma vtype id MOREARGS | ϵ 
+07:    BLOCK -> STMT BLOCK | ϵ 
+08:    STMT -> VDECL | ASSIGN semi 
+09:    STMT -> if lparen COND rparen lbrace BLOCK rbrace ELSE 
+10:    STMT -> while lparen COND rparen lbrace BLOCK rbrace 
+11:    STMT -> for lparen ASSIGN semi COND semi ASSIGN rparen lbrace BLOCK rbrace 
+12:    ELSE -> else lbrace BLOCK rbrace | ϵ  
+13:    RHS -> EXPR | literal 
+14:    EXPR -> TERM addsub EXPR | TERM 
+15:    TERM -> FACTOR multdiv TERM | FACTOR 
+16:    FACTOR -> lparen EXPR rparen | id | num | float 
+17:    COND -> FACTOR comp FACTOR 
+18:    RETURN -> return FACTOR semi 
+
+
+<Non-terminal>
+
+CODE		A
+VDECL		B
+FDECL		C
+ARG		    D
+MOREARGS	E 
+BLOCK		F	
+STMT		G	
+ASSIGN		H
+RHS		    I
+EXPR		J
+TERM		K
+FACTOR		L
+COND		M
+RETURN		N
+ELSE		Q
+
+
+<Terminal>
+
+vtype	a
+num	    b
+float	c
+literal	d
+id	    e
+if	    f
+else	g
+while	h
+for	    i
+return	j
+addsub	k
+multdiv	l
+assign	m
+comp	n
+semi	o
+comma	p
+lparen	q
+rparen	r
+lbrace	s
+rbrace	t

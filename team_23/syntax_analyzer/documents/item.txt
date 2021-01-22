@@ -1,0 +1,177 @@
+<CFG>
+
+00:    S' -> A
+01:    A -> B A | C A | ϵ 
+02:    B -> a e o | a H o  
+03:    H -> e m I  
+04:    C -> a e q D r s F N t 
+05:    D -> a e E | ϵ 
+06:    E -> p a e E | ϵ 
+07:    F -> G F | ϵ 
+08:    G -> B | H o 
+09:    G -> f q M r s F t Q 
+10:    G -> h q M r s F t 
+11:    G -> i q H o M o H r s F t 
+12:    Q -> g s F t | ϵ  
+13:    I -> J | d 
+14:    J -> K k J | K 
+15:    K -> L l K | L 
+16:    L -> q J r | e | b | c 
+17:    M -> L n L 
+18:    N -> j L o 
+
+
+<Item>
+
+S' -> . A
+S' -> A .
+
+A -> . B A
+A -> B . A
+A -> B A .
+
+A -> . C A
+A -> C . A
+A -> C A .
+
+A -> .
+
+B -> . a e o 
+B -> a . e o 
+B -> a e . o 
+B -> a e o .
+
+B -> . a H o
+B -> a . H o
+B -> a H . o
+B -> a H o . 
+
+H -> . e m I 
+H -> e . m I 
+H -> e m . I 
+H -> e m I . 
+
+C -> . a e q D r s F N t 
+C -> a . e q D r s F N t 
+C -> a e . q D r s F N t 
+C -> a e q . D r s F N t 
+C -> a e q D . r s F N t 
+C -> a e q D r . s F N t 
+C -> a e q D r s . F N t 
+C -> a e q D r s F . N t 
+C -> a e q D r s F N . t 
+C -> a e q D r s F N t .
+
+D -> . a e E 
+D -> a . e E 
+D -> a e . E 
+D -> a e E .
+
+D -> .
+
+E -> . p a e E 
+E -> p . a e E 
+E -> p a . e E 
+E -> p a e . E 
+E -> p a e E .
+
+E -> .
+
+F -> . G F 
+F -> G . F 
+F -> G F .
+
+F -> .
+
+G -> . B 
+G -> B .
+
+G -> . H o 
+G -> H . o 
+G -> H o .
+
+G -> . f q M r s F t Q 
+G -> f . q M r s F t Q 
+G -> f q . M r s F t Q 
+G -> f q M . r s F t Q 
+G -> f q M r . s F t Q 
+G -> f q M r s . F t Q 
+G -> f q M r s F . t Q 
+G -> f q M r s F t . Q 
+G -> f q M r s F t Q .
+
+G -> . h q M r s F t 
+G -> h . q M r s F t 
+G -> h q . M r s F t 
+G -> h q M . r s F t 
+G -> h q M r . s F t 
+G -> h q M r s . F t 
+G -> h q M r s F . t 
+G -> h q M r s F t .
+
+G -> . i q H o M o H r s F t 
+G -> i . q H o M o H r s F t 
+G -> i q . H o M o H r s F t 
+G -> i q H . o M o H r s F t 
+G -> i q H o . M o H r s F t 
+G -> i q H o M . o H r s F t 
+G -> i q H o M o . H r s F t 
+G -> i q H o M o H . r s F t 
+G -> i q H o M o H r . s F t 
+G -> i q H o M o H r s . F t 
+G -> i q H o M o H r s F . t 
+G -> i q H o M o H r s F t .
+
+Q -> . g s F t 
+Q -> g . s F t 
+Q -> g s . F t 
+Q -> g s F . t 
+Q -> g s F t .
+
+Q -> .
+
+I -> . J 
+I -> J .
+
+I -> . d
+I -> d .
+
+J -> . K k J
+J -> K . k J
+J -> K k . J
+J -> K k J .
+
+J -> . K
+J -> K .
+
+K -> . L l K
+K -> L . l K
+K -> L l . K
+K -> L l K .
+
+K -> . L
+K -> L .
+
+L -> . q J r  
+L -> q . J r  
+L -> q J . r  
+L -> q J r . 
+
+L -> . e
+L -> e .
+
+L -> . b
+L -> b .
+
+L -> . c
+L -> c .
+
+M -> . L n L 
+M -> L . n L 
+M -> L n . L 
+M -> L n L .
+
+N -> . j L o 
+N -> j . L o 
+N -> j L . o 
+N -> j L o .
