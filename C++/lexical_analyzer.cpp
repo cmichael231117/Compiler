@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <string.h>
 #include <ctype.h>
 
 using namespace std;
@@ -159,7 +159,6 @@ bool isInteger(char buffer[], ofstream &out)
         return true;
     }
 
-    //char symbol = buffer[0];
     int state = 0;
     int acceptable = -1;
     for (int i = 0; i < strlen(buffer); i++)
@@ -212,7 +211,6 @@ bool isInteger(char buffer[], ofstream &out)
             {
                 return false;
             }
-            //out << "error at " << buffer[i] << endl;
         }
     }
     if ((state == 1) || (state == 3))
@@ -224,7 +222,6 @@ bool isInteger(char buffer[], ofstream &out)
         return true;
     else
         return false;
-    //
 }
 bool isFloat(char buffer[], ofstream &out)
 {
@@ -394,7 +391,6 @@ bool isString(char buffer[], ofstream &out)
             state = 5;
         else
             return false;
-        //
     }
     if (state == 5)
     {
@@ -403,7 +399,6 @@ bool isString(char buffer[], ofstream &out)
     }
     else
         return false;
-    //
 }
 bool isIdentifier(char buffer[], ofstream &out)
 {
@@ -447,7 +442,6 @@ bool isIdentifier(char buffer[], ofstream &out)
         else
         {
             return false;
-            //out << "error at " << buffer[i] << endl;
         }
     }
     if ((state == 1) || (state == 2) || (state == 3) || (state == 4) || (state == 5))
@@ -457,7 +451,6 @@ bool isIdentifier(char buffer[], ofstream &out)
     }
     else
         return false;
-    //
 }
 
 void merged(char buffer[], ofstream &out)
@@ -528,7 +521,6 @@ void merged(char buffer[], ofstream &out)
         return;
     }
     else if (!strcmp(buffer, "-0"))
-    //else if((buffer[0]=='-')&&(buffer[1]=='0')&&(buffer[2]=='\0'))
     {
         out << "<ARITHMETIC, " << buffer[0] << ">" << endl;
         out << "<INT, " << buffer[1] << ">" << endl;
@@ -553,13 +545,13 @@ int main(int argc, char **argv)
         cout << "open file failure\n";
         exit(0);
     }
-    //ofstream out(strcat(argv[1], ".out"));
-    ofstream out("result.txt");
+    ofstream out(strcat(argv[1], ".out"));
+    //ofstream out("result.txt");
 
     while (!fin.eof())
     {
         ch = fin.get();
-        if (isalnum(ch) || (ch == '_') || (ch == '.')) //"랑(무조건 쌍이 맞아야함) . 따로(숫자랑만) 빼서 처리
+        if (isalnum(ch) || (ch == '_') || (ch == '.')) 
         {
             buffer[i++] = ch;
         }
@@ -632,7 +624,7 @@ int main(int argc, char **argv)
             }
             else if (buffer[0] == '!')
             {
-                cout << "Error at !" << endl; //파일에 출력하기
+                out << "Error at !" << endl; 
                 exit(0);
             }
             else
@@ -646,7 +638,7 @@ int main(int argc, char **argv)
         }
         else if ((ch == '+') || (ch == '*') || (ch == '/') ||
                  (ch == '&') || (ch == '|') || (ch == ';') || (ch == '{') ||
-                 (ch == '}') || (ch == '(') || (ch == ')') || (ch == ',')) //두개짜리 분리는 따로하자
+                 (ch == '}') || (ch == '(') || (ch == ')') || (ch == ',')) 
         {
             if (i != 0)
             {
@@ -673,20 +665,13 @@ int main(int argc, char **argv)
             buffer[i++] = ch;
             ch = fin.get();
             fin.seekg(-1, ios::cur);
-            if (!isdigit(ch)) ////////////////////////////////
+            if (!isdigit(ch)) 
             {
                 buffer[i] = '\0';
                 i = 0;
                 merged(buffer, out);
             }
-        } /*
-        else if ((i > 0) && (buffer[0] == '-') && (isalpha(ch) || ch == '"' || ch == '_'))
-        {
-            buffer[i] = '\0';
-            i = 0;
-            //test
-            merged(buffer, out);
-        }*/
+        }
         else if (ch == EOF)
         {
             buffer[i] = '\0';

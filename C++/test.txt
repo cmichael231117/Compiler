@@ -1,26 +1,23 @@
--1348091324
-_daiu028900jk2mb0nfs_319j
-"da7fkf345jah"
-"adf fdas4far5s  f3212s"
-<if
-2
-int main(){
-    printf("helloworld");
-    int a=1;
-    float b=0.0
-}
--"dfd"
--2if
-89999
+int
+-12312
+-0.00.0
 -0
-afdjkfhadsf-213
--0123
--0.0
+- 90
+"Hello world 123"
+true
+0.0
+if123zds
+while
+return
++*
+>>
+=
+<=
+==
+;
+{
+    (
 
-
-
-=()12
-if123abc
-
--0.00
-
+    )
+}
+,
